@@ -1,1 +1,1 @@
-exclude: [Gemfile, Gemfile.lock, AUTHORS, LICENSE, README.md]
+exclude: [Gemfile, Gemfile.lock, firebase.json, AUTHORS, LICENSE, README.md]
