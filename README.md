@@ -1,4 +1,4 @@
-This repo contains the source code for the main Dartino website available at https://www.dartino.org.
+This repo contains the source code for the main Dartino website available at [https://www.dartino.org](https://www.dartino.org).
 
 ## Installation instructions
 
@@ -28,7 +28,7 @@ Ask Jekyll to generate the site and host it locally:
 `bundle exec jekyll serve`
 
 View the site in the browser:
-`http://localhost:4000`
+[`http://localhost:4000`](http://localhost:4000)
 
 ## Publishing changes
 
@@ -43,4 +43,4 @@ The site is hosted on Firebase. After validating the output in the `_site` direc
 `firebase deploy`
 
 Check the deployment status on the admin page:
-`http://go/dartino-firebase-admin`
+[`http://go/dartino-firebase-admin`](http://go/dartino-firebase-admin)
