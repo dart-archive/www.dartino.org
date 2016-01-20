@@ -1,3 +1,8 @@
+---
+title: Fletch project
+layout: page
+---
+
 The instructions in [getting started page](index.html) configures the Raspberry
 Pi 2 SD card image using an automated script. If you prefer to create the image
 manually, you can use these steps:
