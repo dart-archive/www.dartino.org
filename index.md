@@ -42,7 +42,7 @@ To develop embedded programs with Dartino, you will need the following:
 * Optional: A breadboard and a collection of components for running some of
  the samples (will be discussed later)
 
-![What you need photo](https://storage.googleapis.com/fletch-archive/images/setup.jpg)
+![What you need photo](/images/setup-photo.jpg)
 
 ## Installing the SDK
 
@@ -101,7 +101,7 @@ When you ask ```fletch``` to run the program, it compiles the program to byte
 code, and then passes it to the local Dartino VM for execution. The VM passes
 back the result, and Dartino prints it to your command line.
 
-![Dartino architecture diagram](https://storage.googleapis.com/fletch-archive/images/Fletch-architecture.png)
+![Dartino architecture diagram](/images/architecture-diagram.png)
 
 Now let’s get things running in a *remote session* that is connected to your
 Raspberry Pi 2!

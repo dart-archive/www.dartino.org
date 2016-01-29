@@ -68,7 +68,7 @@ use a [breadboard](http://www.instructables.com/id/How-to-use-a-breadboard/) for
 fast iteration.
 
 Start by building a circuit resembling [this
-schematic](https://storage.googleapis.com/fletch-archive/images/buzzer-schematic.png).
+schematic](/images/buzzer-schematic.png).
 
 We will be communicating with the components on the breadboard using a
 [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output) (general
@@ -167,8 +167,13 @@ structure our program using classes and encapsulation.
 
 We are going to build a small running light. Remember
 [KITT](https://www.youtube.com/watch?v=Mo8Qls0HnWo), the car from the Knight
-Rider show? Let's try to [replicate those
-lights](https://storage.googleapis.com/fletch-archive/images/knight-rider.mp4).
+Rider show? Let's try to replicate those lights!
+
+<video width="480" height="270" autoplay="autoplay" controls="controls" loop="loop">
+		<source src="/images/knight-rider.mp4" type="video/mp4" />
+    <source src="/images/knight-rider.webm" type="video/webm" />
+		Your browser does not support the video tag.
+</video>
 
 The full program is available in
 ```samples/raspberry_pi/basic/knight-rider.dart```. Let's step through how it's
@@ -270,7 +275,7 @@ as a gyroscope, an accelerometer, and a humidity sensor. The Sense HAT is so
 powerful that it will be [going into
 space!](https://www.raspberrypi.org/blog/astro-pi/)
 
-![Sense HAT photo](https://storage.googleapis.com/fletch-archive/images/sense-hat.jpg)
+![Sense HAT photo](/images/sense-hat.jpg)
 
 In this sample we are going to use the accelerometer to sense which direction
 the board is pointing in, and then display that direction using the LED matrix
