@@ -10,10 +10,12 @@ for embedded devices. It is powered by the [Dart
 language](https://www.dartlang.org/docs/dart-up-and-running/ch02.html) and a
 fast, lean runtime.
 
-This page walks you through running your first program on Dartino. Note that this
-early version of Dartino only supports a single embedded device -- the Raspberry
-Pi 2 -- and that the only supported client operating systems supported for
-development are MacOS and Linux (sorry, no Windows support).
+This page walks you through running your first program on Dartino. Note that
+this early version of Dartino only supports a single embedded device -- the
+Raspberry Pi 2 -- and that the only supported client operating systems supported
+for development are MacOS and Linux. Future versions are expected to support
+both Windows, and smaller embedded devices based on Cortex M micro-controllers
+(MCUs).
 
 If you just want to see what Dartino programs look like, take a peek at our
 [samples page](samples.html).
