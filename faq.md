@@ -33,3 +33,8 @@ Discuss](https://groups.google.com/forum/#!forum/dartino-discuss) group.
 * *Q*: What about Pub, dartfmt, docgen, analyzer from the [Dart
  SDK](https://www.dartlang.org/tools/sdk/)?
 * *A*: These are currently not supported for Dartino.
+
+* *Q*: Do you any downloadable presentation material about Dartino?
+* *A*: Yes, see <a href="/downloads/Dartino-Modern-Embedded-Programming.pdf"
+target="blank" onclick="ga('send', 'event', 'Downloads',
+'Dartino-Modern-Embedded-Programming.pdf');">this short presentation</a>
