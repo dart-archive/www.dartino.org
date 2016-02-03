@@ -51,8 +51,10 @@ To develop embedded programs with Dartino, you will need the following:
 First download the SDK. This is available as a '.zip' archive; pick the one that
 matches the OS of the PC you will be using for development:
 
-* [Dartino SDK for MacOS (64-bit)](https://storage.googleapis.com/fletch-archive/channels/dev/release/latest/sdk/fletch-sdk-macos-x64-release.zip)
-* [Dartino SDK for Linux (64-bit)](https://storage.googleapis.com/fletch-archive/channels/dev/release/latest/sdk/fletch-sdk-linux-x64-release.zip)
+* <a href="https://storage.googleapis.com/fletch-archive/channels/dev/release/latest/sdk/fletch-sdk-macos-x64-release.zip"
+onclick="ga('send', 'event', 'Downloads', 'MacOS SDK');">Dartino SDK for MacOS (64-bit)</a>
+* <a href="https://storage.googleapis.com/fletch-archive/channels/dev/release/latest/sdk/fletch-sdk-linux-x64-release.zip"
+onclick="ga('send', 'event', 'Downloads', 'Linux SDK');">Dartino SDK for Linux (64-bit)</a>
 
 Unzip the SDK, and add the 'fletch' command to the path by typing the
 below in a terminal window:
