@@ -1,3 +1,10 @@
+---
+title: Dartino project
+layout: page
+---
+
+# Manual install instructions
+
 The instructions in [getting started page](index.html) configures the Raspberry
 Pi 2 SD card image using an automated script. If you prefer to create the image
 manually, you can use these steps:
