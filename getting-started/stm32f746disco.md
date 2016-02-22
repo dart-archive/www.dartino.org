@@ -122,7 +122,7 @@ This requires a bit of configuration:
  don't already have homebrew, follow the ['install homebrew'](http://brew.sh/)
  instructions.
   1. In a terminal run:
-  <br>`brew tap libusb`
+  <br>`brew install libusb`
 
 * On Linux:
   1. We need to enable OpenOCD to use the USB port:
