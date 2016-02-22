@@ -9,9 +9,10 @@ layout: default
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Dartino Project</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/stylesheets/github-light.css">
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/stylesheets/dart-highlighting.css">
+    <link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -25,17 +26,18 @@ layout: default
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">The Dartino Project</h1>
-        <p class="header">Fast, flexible, and productive development for devices.</p>
+        <p class="header">
+          <img src="/images/dartino-logo.png" style="width: 150px;"/>
+        </p>
 
         <ul>
-          <li><a href="index.html">Getting started</a></li>
-          <li><a href="samples.html">Samples</a></li>
-          <li><a href="tool.html">Tool details</a></li>
-          <li><a href="feedback.html">Feedback</a></li>
-          <li><a href="faq.html">Questions</a></li>
+          <li><a href="/">Why Dartino</a></li>
+          <li><a href="/getting-started/">Getting started</a></li>
+          <li><a href="/samples/">Samples</a></li>
+          <li><a href="/tool.html">Tool details</a></li>
+          <li><a href="/faq.html">FAQ and feedback</a></li>
           <li><a href="https://dartino.github.io/api/" target="_blank">API documentation
-            <img src="images/external-link.png" alt="External link icon"
+            <img src="/images/external-link-blue.png" alt="External link icon"
             style="border:0; padding:0; margin:0"/></a>
           </li>
         </ul>
@@ -46,8 +48,11 @@ layout: default
       </section>
 
       <footer>
-        <p>An experimental project by the <a href="https://www.dartlang.org">Dart team</a></p>
-        <p><small>Hosted on <a href="https://www.firebase.com/features.html#features-hosting">Firebase</a></small></p>
+        <p class="headersmall">An experimental project by Google and
+          the <a href="https://www.dartlang.org"> Dart team</a>.<br>
+          Hosted on <a href="https://www.firebase.com/features.html#features-hosting">
+          Firebase</a>
+        </p>
       </footer>
     </div>
   </body>

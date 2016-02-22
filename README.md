@@ -2,18 +2,16 @@ This repo contains the source code for the main Dartino website available at [ht
 
 ## Installation instructions
 
-Install Jekyll, which takes does the markdown to HTML generation:
-
 1. Check that you have Ruby (Mac’s already have this):
 `ruby --version`
 
-1. Install Bundler:
+1. We will be running everything inside bundler -- install it:
 `sudo gem install bundler`
 
-1. Install Jekyll and the github-pages plugin (this will take a while):
-`sudo gem install github-pages`
+1. Initialize bundle:
+`bundle install`
 
-Install the Firebase CLI.
+1. Install the Firebase CLI.
 
 ## Making changes
 
@@ -35,7 +33,7 @@ View the site in the browser:
 ### Generate a new site
 
 The actual hosted content is in the `_site` directory. Update the content of that site by asking Jekyll to generate:
-`jekyll build`
+`bundle exec jekyll build`
 
 ### Publish files
 

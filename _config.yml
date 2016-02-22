@@ -1,1 +1,7 @@
 exclude: [Gemfile, Gemfile.lock, firebase.json, AUTHORS, LICENSE, README.md]
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge

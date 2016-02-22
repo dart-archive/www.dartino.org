@@ -39,7 +39,7 @@ There are several ways you can configure the IP number of the Raspberry:
 
 * *Option 2*: If you are on a Linux developer PC, you can also configure the image directly from your developer PC.
   * Mount the SD card
-  * Enter the following in a console: ```$HOME/fletch-sdk/platforms/raspberry-pi2/setup-ip.sh <path to SD card's boot partition>```
+  * Enter the following in a console: ```$HOME/dartino-sdk/platforms/raspberry-pi2/setup-ip.sh <path to SD card's boot partition>```
 
 * *Option 3*: If you are on a Mac developer PC, you can connect directly to the Raspberry Pi via an USB Network adapter connected to the Raspberry Pi via a networking cable, and the following configuration steps:
   * Turn off your Raspberry Pi
@@ -58,18 +58,18 @@ There are several ways you can configure the IP number of the Raspberry:
 The last step is to install the Dartino runtime on the Raspberry Pi (see the
 right-hand side of the architecture diagram above). Use the following commands.
 
-A. Copy the fletch-agent package to the Raspberry Pi 2 (the default password for
+A. Copy the dartino-agent package to the Raspberry Pi 2 (the default password for
 user 'pi' on Raspbian is 'raspberry'):
 
-~~~
-cd $HOME/fletch-sdk
-scp ./platforms/raspberry-pi2/fletch-agent*.deb pi@192.168..:/home/pi/
-~~~
+```
+cd $HOME/dartino-sdk
+scp ./platforms/raspberry-pi2/dartino-agent*.deb pi@192.168..:/home/pi/
+```
 
 B. Install the package:
 
-~~~
-ssh pi@192.168.. sudo dpkg --install /home/pi/fletch-agent*.deb
-~~~
+```
+ssh pi@192.168.. sudo dpkg --install /home/pi/dartino-agent*.deb
+```
 
-You should see something like ```Unpacking fletch-agent...``` on your screen.
+You should see something like ```Unpacking dartino-agent...``` on your screen.

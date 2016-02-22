@@ -3,33 +3,33 @@ title: Dartino project samples
 layout: page
 ---
 
-# Fletch project samples
+# Dartino samples for Raspberry Pi 2
 
-We have a number of sample programs available in the ```samples/raspberry_pi```
+We have a number of sample programs available in the `samples/raspberry_pi2`
 folder. Let’s take a look at the code, and get familiar with the platform.
 
 
-* [blinky.dart](#blinky)
+* [basic/blinky.dart](#blinky)
   * The 'hello world' of embedded: Blink an LED
   * Requires a Raspberry Pi 2
 
-* [buzzer.dart](#buzzer)
+* [basic/buzzer.dart](#buzzer)
   * Controlling GPIO input and output pins
   * Requires a Raspberry Pi 2 and some components
 
-* [door-bell.dart](#door-bell)
+* [basic/door-bell.dart](#door-bell)
   * Using GPIO events
   * Requires a Raspberry Pi 2 and some components
 
-* [knight-rider.dart](#knight-rider)
+* [basic/knight-rider.dart](#knight-rider)
   * Structuring larger programs with classes
   * Requires a Raspberry Pi 2 and some components
 
-* [accelerometer.dart](#sense-hat-accelerometer)
+* [sense-hat/accelerometer.dart](#sense-hat-accelerometer)
   * Communicating with a 'Sense HAT shield'
   * Requires a Raspberry Pi 2 and a [Sense HAT](https://www.raspberrypi.org/products/sense-hat/)
 
-* [ticker.dart](#ticker)
+* [sense-hat/ticker.dart](#ticker)
   * Outputing text messages via a running "news ticker"
   * Requires a Raspberry Pi 2 and a [Sense HAT](https://www.raspberrypi.org/products/sense-hat/)
 
@@ -37,27 +37,26 @@ folder. Let’s take a look at the code, and get familiar with the platform.
 
 Embedded devices are most commonly used to collect data and perform some kind of
 control task via attached sensors and output devices such as LEDs. Take a look
-at the ```blinky.dart``` program located in the
-```samples/raspberry_pi/basic/``` folder. This blinks the Raspberry Pi 2
-on-board LED.
+at the `blinky.dart` program located in the `samples/raspberry_pi2/basic/`
+folder. This blinks the Raspberry Pi 2 on-board LED.
 
 First the program initializes the RaspberryPi helper object:
 
-~~~
+```dart
 RaspberryPi pi = new RaspberryPi();
 pi.leds.activityLED.setMode(OnboardLEDMode.gpio);
-~~~
+```
 
 Next, it simply loops and alternates between turning the led on and off:
 
-~~~
+```dart
 while (true) {
   pi.leds.activityLED.on();
   sleep(500);
   pi.leds.activityLED.off();
   sleep(500);
 }
-~~~
+```
 
 Pretty easy, right!?
 
@@ -74,16 +73,16 @@ We will be communicating with the components on the breadboard using a
 [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output) (general
 purpose input/output) interface. First we need to configure the GPIO pins for
 the components we wired up (full runnable code located in
-```samples/raspberry_pi/basic/buzzer.dart```):
+`samples/raspberry_pi2/basic/buzzer.dart`):
 
-~~~
+```dart
 import 'package:gpio/gpio.dart';
 
 main() {
   // GPIO pin constants.
   const int button = 16;
   const int speaker = 21;
-~~~
+```
 
 Notice how we are using pins 16 and 21. Those pin numbers are based on the
 connection points shown in the schematic, and the [pinout for the Raspberry Pi
@@ -92,23 +91,22 @@ connection points shown in the schematic, and the [pinout for the Raspberry Pi
 Next, we need to tell GPIO which pins we intend to write to (i.e., use as
 output), and which we intend to read from (i.e., use as input):
 
-~~~
+```dart
 RaspberryPi pi = new RaspberryPi();
-PiMemoryMappedGPIO gpio = pi.memoryMappedGPIO;
-gpio.setMode(button, Mode.input);
-gpio.setMode(speaker, Mode.output);
-~~~
+RaspberryPiMemoryMappedGpio gpio = pi.memoryMappedGpio;
+GpioOutputPin speaker = gpio.initOutput(speakerPin);
+GpioInputPin button = gpio.initInput(buttonPin);
+```
 
 Finally, we simply spin in an internal loop and map the state of the button to
 the speaker, i.e. when we see a high signal on the button we set a high signal
 on the speaker and vice versa.
 
-~~~
+```dart
 while (true) {
-  bool buttonState = gpio.getPin(button);
-  gpio.setPin(speaker, buttonState);
+  speaker.state = button.state;
 }
-~~~
+```
 
 ## Door bell
 
@@ -119,43 +117,44 @@ via GPIO events. Let try to build a small door bell.
 First we need to configure GPIO for events. We configure the pins as before, and
 then enable a trigger on the button:
 
-~~~
-// Initialize Raspberry Pi and configure the pins.
+```dart
+// Initialize Raspberry Pi and use the Sysfs GPIO.
 RaspberryPi pi = new RaspberryPi();
-SysfsGPIO gpio = pi.sysfsGPIO;
+SysfsGpio gpio = pi.sysfsGpio;
 
 // Initialize pins.
-gpio.exportPin(speaker);
-gpio.setMode(speaker, Mode.output);
-gpio.exportPin(button);
-gpio.setMode(button, Mode.input);
-gpio.setTrigger(button, Trigger.both);
-~~~
+gpio.exportPin(speakerPin);
+GpioOutputPin speaker = gpio.initOutput(speakerPin);
+gpio.exportPin(buttonPin);
+GpioInputPin button =
+    gpio.initInput(buttonPin, trigger: GpioInterruptTrigger.both);
+```
 
 Next, we simply wait for the button to be pressed (i.e., for the GPIO pin of the
 button to go to 'true'):
 
-~~~
+```dart
 while (true) {
   // Wait for button press.
-  gpio.waitFor(button, true, -1);
+  button.waitFor(true, -1);
 
+  // Sound bell.
   ...
   }
 }
-~~~
+```
 
 And then we sound the bell:
 
-~~~
-// Sound bell.
-for (var i = 1; i <= 3; i++) {
-  gpio.setPin(speaker, true);
-  sleep(100);
-  gpio.setPin(speaker, false);
-  sleep(500);
-}
-~~~
+```dart
+  // Sound bell.
+  for (var i = 1; i <= 3; i++) {
+    speaker.state = true;
+    sleep(100);
+    speaker.state = false;
+    sleep(500);
+  }
+```
 
 ## Knight rider
 
@@ -175,11 +174,10 @@ Rider show? Let's try to replicate those lights!
 		Your browser does not support the video tag.
 </video>
 
-The full program is available in
-```samples/raspberry_pi/basic/knight-rider.dart```. Let's step through how it's
-built.
+The full program is available in `samples/raspberry_pi2/basic/knight-rider.dart`.
+Let's step through how it's built.
 
-First we will create a ```Lights``` helper class. This class will contain all
+First we will create a `Lights` helper class. This class will contain all
 the core functionality required for managing the LEDs on the breadboard that we
 will be animating. Initially let's define a variable containing a list of
 integers containing the GPIO pins of all the connected LEDs, and a variable
@@ -187,38 +185,36 @@ containing a GPIO manager. Note that the GPIO variable starts with an
 underscore; this is the Dart syntax for declaring a private variable that is
 encapsulated to the implementation of the class.)
 
-~~~
+```dart
 class Lights {
-  final GPIO _gpio;
-  final List<int> leds;
+  final Gpio _gpio;
+  final List<Pin> leds;
+  List<GpioOutputPin> gpioPins;
 
   Lights(this._gpio, this.leds);
   ...
 }
-~~~
+```
 
 Next, let's implement a small helper function that we can call with a LED number
 (e.g., 2), and which then turns LED number 2 in the LED chain on and turns all
 the other LEDs in the chain off:
 
-~~~
-// Sets LED [ledToEnable] to true, and all others to false.
-void _setLeds(int ledToEnable) {
-  var state;
-
-  for (int i = 0; i < leds.length; i++) {
-    bool state = (i == ledToEnable);
-    _gpio.setPin(leds[i], state);
+```dart
+  // Sets LED [ledToEnable] to true, and all others to false.
+  void _setLeds(int ledToEnable) {
+    for (int i = 0; i < leds.length; i++) {
+      gpioPins[i].state = (i == ledToEnable);
+    }
   }
-}
-~~~
+```
 
 Next, we need to have the lights first move from the left to the right, and then
 from the right to the left. We will do this in another two methods that simply
 run in a for loop either from 0 to the number or LEDs, or the opposite, and then
 call the helper function above:
 
-~~~
+```dart
 // Iterates though the lights in increasing order, and sets the LEDs using
 // a helper function. Pauses [waitTime] milliseconds before returning.
 void runLightLeft(int waitTime) {
@@ -236,13 +232,13 @@ void runLightRight(int waitTime) {
     sleep(waitTime);
   }
 }
-~~~
+```
 
 Finally, we just need a small Main function to to hold the GPIO pins, to
 initialize our Lights helper class, and to call the lights methods, and we are
 done!
 
-~~~
+```dart
 main() {
   // Initialize Raspberry Pi.
   RaspberryPi pi = new RaspberryPi();
@@ -250,10 +246,13 @@ main() {
   // Array constant containing the GPIO pins of the connected LEDs.
   // You can add more LEDs simply by extending the list. Make sure
   // the pins are listed in the order the LEDs are connected.
-  List<int> leds = [26, 19, 13, 6];
+  List<Pin> leds = [RaspberryPiPin.GPIO26,
+                    RaspberryPiPin.GPIO19,
+                    RaspberryPiPin.GPIO13,
+                    RaspberryPiPin.GPIO6];
 
   // Initialize the lights controller class.
-  Lights lights = new Lights(pi.memoryMappedGPIO, leds);
+  Lights lights = new Lights(pi.memoryMappedGpio, leds);
   lights.init();
 
   // Alternate between running left and right in a continuous loop.
@@ -263,7 +262,7 @@ main() {
     lights.runLightRight(waitTime);
   }
 }
-~~~
+```
 
 ## Sense HAT Accelerometer
 
@@ -280,7 +279,7 @@ space!](https://www.raspberrypi.org/blog/astro-pi/)
 In this sample we are going to use the accelerometer to sense which direction
 the board is pointing in, and then display that direction using the LED matrix
 display. Full code is in
-```samples/raspberry_pi/sense_hat/accelerometer/accelerometer.dart```.
+`samples/raspberry_pi2/sense_hat/accelerometer/accelerometer.dart`.
 
 We start with a helper function that will draw a color bar on the display. It
 will take a direction argument (north, west, etc.), and a segment number from 0
@@ -288,7 +287,7 @@ to 3 telling it how far from the center it should draw. Calling it with segment
 1 and north, for example, will draw this bar show on the left, and segment 0 and
 east will draw the bar shown on the right:
 
-~~~
+```
 _ _ _ _ _ _ _ _          _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _          _ _ _ _ _ _ _ _
 _ _ x x x x _ _          _ _ _ _ _ _ _ _
@@ -297,11 +296,11 @@ _ _ _ _ _ _ _ _          _ _ _ _ x _ _ _
 _ _ _ _ _ _ _ _          _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _          _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _          _ _ _ _ _ _ _ _
-~~~
+```
 
 The implementation of the function is here:
 
-~~~
+```dart
 void drawSegment(SenseHatLEDArray ledArray,
                  Direction direction,
                  int segment,
@@ -310,44 +309,44 @@ void drawSegment(SenseHatLEDArray ledArray,
       const <Color>[Color.white, Color.green, Color.blue, Color.red];
 
   if (color == null) color = defaultSegmentColor[segment];
-  var length = (segment + 1) * 2;
-  var info = segmentData[direction];
-  var x = info.origin.x + info.direction.x * segment;
-  var y = info.origin.y + info.direction.y * segment;
+  int length = (segment + 1) * 2;
+  SegmentData info = segmentData[direction];
+  int x = info.origin.x + info.direction.x * segment;
+  int y = info.origin.y + info.direction.y * segment;
   for (int i = 0; i < length; i++) {
     ledArray.setPixel(x, y, color);
     x += info.step.x;
     y += info.step.y;
   }
 }
-~~~
+```
 
-This function uses ```ledArray.setPixel``` to manage the LED display. This
-method is implemented by the Fletch Sense HAT library (see
-```pkg/raspberry_pi/lib/sense_hat.dart```), which provides a convenient
-interface for the Sense HAT.
+This function uses `ledArray.setPixel` to manage the LED display. This method is
+implemented by the Dartino Sense HAT library (see
+`pkg/raspberry_pi2/lib/sense_hat.dart`), which provides a convenient interface
+for the Sense HAT.
 
 We will use the same library to read from the accelerometer:
 
-~~~
+```dart
 while (true) {
   // Read the accelerometer and update the display it one of the values
   // changed.
-  var accel = hat.readAccel();
-  var p = trimValue(accel.pitch);
-  var r = trimValue(accel.roll);
+  AccelMeasurement accel = hat.readAccel();
+  int p = trimValue(accel.pitch);
+  int r = trimValue(accel.roll);
   if (p != pitch || r != roll) {
     pitch = p;
     roll = r;
     draw();
   }
 }
-~~~
+```
 
 Lastly, we connect the reading of the pitch and roll values to drawing of a
 directional bar in the draw function:
 
-~~~
+```dart
 void draw() {
   hat.clear();
   if (pitch == 0 && roll == 0) {
@@ -368,7 +367,7 @@ void draw() {
     }
   }
 }
-~~~
+```
 
 ## Ticker
 
@@ -381,8 +380,8 @@ very limited screen estate.
   src="https://www.youtube.com/embed/tg27sAVNx8U?rel=0"
   frameborder="0" allowfullscreen></iframe>
 
-The code is in ```samples/raspberry_pi/sense_hat/ticker/```, split into two
-separate files.
+The code is in `samples/raspberry_pi2/sense_hat/ticker/`, split into two separate
+files.
 
 In `font.dart` we find the Font class. This represents a bitmap font that can
 render itself on the Sense HAT LED matrix. The bulk of the code is in the
@@ -392,13 +391,13 @@ the SenseHatLEDArray object (which it redraws), the message string, and the
 offset in pixels.
 
 The same file also provides `defaultFont`, an instance of the Font class and
-a 6x5 font specially crafted for Fletch. You can use it in your own projects.
+a 6x5 font specially crafted for Dartino. You can use it in your own projects.
 
 In `ticker.dart`, all we need to do is the animation. We increment the
 offset once every 70 milliseconds and re-render. This gives the impression of
 a sliding text message.
 
-~~~
+```dart
 main() {
   // Instantiate the Sense HAT API.
   var hat = new SenseHat();
@@ -414,10 +413,10 @@ main() {
       // Reset.
       offset = -hat.ledArray.width;
     }
-    os.sleep(70);
+    sleep(70);
   }
 }
-~~~
+```
 
 We could update the message text with readings from sensors, current time, or
 anything else we needed to convey to the user.
