@@ -15,7 +15,7 @@ We currently support the following boards directly:
 * [Raspberry Pi 2](raspberrypi2.html)
 ([board details](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/))
 <br>
-[![Raspberry Pi 2 board photo](/images/RPi2.jpg)](raspberrypi2.html)
+[![Raspberry Pi 2 board photo](/images/RPI2.jpg)](raspberrypi2.html)
 
 If you just want to see what Dartino programs look like, take a peek at our
 [samples page](/samples/).

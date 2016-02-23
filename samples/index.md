@@ -15,7 +15,7 @@ We have samples available for the following boards:
 * [Raspberry Pi 2](raspberrypi2.html)
 ([board details](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/))
 <br>
-[![Raspberry Pi 2 board photo](/images/RPi2.jpg)](raspberrypi2.html)
+[![Raspberry Pi 2 board photo](/images/RPI2.jpg)](raspberrypi2.html)
 
 To run these samples, and your own programs, please see
 [getting started](/getting-started/).
