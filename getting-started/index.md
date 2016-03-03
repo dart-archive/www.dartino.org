@@ -24,4 +24,4 @@ If you would like to use Dartino a different board, please see the [custom
 bring-up](/custom-bring-up.html) page.
 
 *Note:* We currently do not support Windows, so you will need a development PC
-running MacOS and Linux. Future versions are expected to support Windows.
+running MacOS or Linux. Future versions are expected to support Windows.
