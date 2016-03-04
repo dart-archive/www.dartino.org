@@ -5,7 +5,8 @@ layout: page
 
 # Dartino code samples
 
-We have samples available for the following boards:
+We have samples available for the following boards. Please click a board to see
+it's samples.
 
 * [ST STM32F746 Discovery](stm32f746disco.html)
 ([board details](http://www.st.com/stm32f7-discovery))

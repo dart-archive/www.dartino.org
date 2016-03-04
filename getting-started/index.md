@@ -5,7 +5,8 @@ layout: page
 
 # Getting started
 
-We currently support the following boards directly:
+We currently support the following boards directly. Please click a board to get
+started.
 
 * [ST STM32F746 Discovery](stm32f746disco.html)
 ([board details](http://www.st.com/stm32f7-discovery))
