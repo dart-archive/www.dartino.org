@@ -135,6 +135,10 @@ Then to get the program onto the board simply use:
 dartino flash samples/general/hello.dart
 ```
 
+*Note*: If you get the error *"jtag status contains invalid mode value -
+communication failure"* when flashing, your board likely has outdated flashing
+firmware. You can update to version V2j27 or later using the [ST-LINK firmware
+upgrader](http://www.st.com/web/en/catalog/tools/PF260217).
 
 ## Next steps
 
