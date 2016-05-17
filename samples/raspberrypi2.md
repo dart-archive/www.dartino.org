@@ -67,7 +67,7 @@ use a [breadboard](http://www.instructables.com/id/How-to-use-a-breadboard/) for
 fast iteration.
 
 Start by building a circuit resembling [this
-schematic](/images/buzzer-schematic.png).
+schematic](/images/buzzer-schematic-rpi2.png).
 
 We will be communicating with the components on the breadboard using a
 [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output) (general

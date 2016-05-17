@@ -29,8 +29,8 @@ Discuss](https://groups.google.com/forum/#!forum/dartino-discuss) group.
 
 * *Q*:  What is the state of the project?
 * *A*: Dartino is an experimental project in the alpha phase. Things are
- still incomplete, and under development. Please take a look, [try it
- out](/getting-started/), and give us some [feedback](feedback.html)!
+ still incomplete, and under development. Please take a look, and [try it
+ out](/getting-started/)!
 
 * *A*: What is supported?
 * *Q*: You need a client PC for writing your program, and a target device for
