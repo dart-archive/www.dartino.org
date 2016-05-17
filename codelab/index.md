@@ -1,3 +1,8 @@
+---
+title: Dartino codelab
+layout: page
+---
+
 # Dartino Codelab
 
 ## What you will need
@@ -14,7 +19,7 @@ board
 
 ## Step 0: Getting started
 
-Please follow the steps in [the setup instructions](setup.md).
+Please follow the steps in [the setup instructions](setup.html).
 
 ## Step 1: Getting acquainted with Dartino programs
 

@@ -1,6 +1,11 @@
-# Dartino Codelab
+---
+title: Dartino codelab setup
+layout: page
+---
 
-These instructions will help you prepare for the Dartino codelab.
+# Dartino Codelab setup
+
+These instructions will help you prepare for the [Dartino codelab](index.html).
 
 The current codelab uses Dartino SDK version 0.4.0.
 
