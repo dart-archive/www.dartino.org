@@ -90,7 +90,7 @@ dartino x-download-tools
 On Linux (not Mac), we also need need 32-bit libc libraries:
 
 ```
-sudo apt-get install libc6-i386
+sudo apt-get install libc6-i386 lib32stdc++6
 ```
 
 Now we can compile the program into a flashable image, and flash that image
