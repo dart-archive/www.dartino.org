@@ -1,9 +1,5 @@
 {
-  "firebase": "www-dartino-org-a9620",
-  "public": "_site",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ]
+  "hosting": {
+    "public": "_site"
+  }
 }
