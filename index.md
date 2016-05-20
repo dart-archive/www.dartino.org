@@ -18,7 +18,7 @@ semantics, so you can probably already read and even write Dart code!
 
 ```dart
 import 'package:gpio/gpio.dart';
-import 'package:stm32f746g_disco/stm32f746g_disco.dart';
+import 'package:stm32/stm32f746g_disco.dart';
 
 main() {
   // Initialize board and configure LED1 as an output pin
