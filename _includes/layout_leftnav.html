@@ -1,0 +1,26 @@
+    <ul class="menu">
+      {% for link in page.nav %}
+        {% if page.url contains link.url %}
+          <li{% if page.url == link.url %} class="menu-current-selection"{% endif %}>
+            <a href="{{link.url}}" title="{{page.title}}">{{link.text}}</a>
+
+            {% if link.subnav != 'none' %}
+              <ul class="menu">
+                {% for sublink in link.subnav %}
+                  <li{% if page.url == sublink.url %} class="menu-current-selection"{% endif %}>
+                      <a href="{{sublink.url}}" title="{{sublink.title}}">{{sublink.text}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% else %}
+          <li>
+              <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+      <li><a href="https://dartino.github.io/api/" target="_blank">API documentation
+            <img src="/images/external-link-blue.png" alt="External link icon" style="border:0; padding:0; margin:0"></a>
+      </li>
+    </ul>

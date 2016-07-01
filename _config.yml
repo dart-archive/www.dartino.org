@@ -1,7 +1,10 @@
 exclude: [Gemfile, Gemfile.lock, firebase.json, AUTHORS, LICENSE, README.md]
 # Build settings
+permalink: pretty
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
+gems:
+    - jekyll-redirect-from

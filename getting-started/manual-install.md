@@ -1,11 +1,11 @@
 ---
-title: Dartino project
+title: Dartino Getting Started manually
 layout: page
 ---
 
 # Manual install instructions
 
-The instructions in [getting started page](index.html) configures the Raspberry
+The instructions in [getting started page](/getting-started/) configures the Raspberry
 Pi 2 SD card image using an automated script. If you prefer to create the image
 manually, you can use these steps:
 

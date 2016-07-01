@@ -12,14 +12,14 @@ following:
 
 * A developer PC (running MacOS, Linux, or Windows) where you write the programs
 
-* A [STM32F746G Discovery](http://www.st.com/stm32f7-discovery) development
+* A [STM32F746G Discovery](http://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-eval-tools/stm32-mcu-eval-tools/stm32-mcu-discovery-kits/32f746gdiscovery.html) development
 board
 
 * A MiniUSB cable to connect the development board and your developer PC
 
 ## Step 0: Getting started
 
-Please follow the steps in [the setup instructions](setup.html).
+Please follow the steps in [the setup instructions](/codelab/setup/).
 
 ## Step 1: Getting acquainted with Dartino programs
 
@@ -78,7 +78,7 @@ You will find that the non-recursive function is much faster.
 
 ## Step 3: Getting acquainted with the Atom editor
 
-The Dartino tools are based on the [Atom editor](http://atom.io). This is a
+The Dartino tools are based on the [Atom editor](https://atom.io). This is a
 highly customizable editor created by the team behind GitHub.
 
 To open Atom, go to the Terminal and cd to your codelab dir:

@@ -8,21 +8,24 @@ layout: page
 We currently support the following boards directly. Please click a board to get
 started.
 
-* [ST STM32F746 Discovery](stm32f746disco.html)
-([board details](http://www.st.com/stm32f7-discovery))
+* [ST STM32F746 Discovery](/getting-started/stm32f746disco/)
+([board details][stm32f746])
 <br>
-[![STM32F746 board photo](/images/ST32F746.jpg)](stm32f746disco.html)
+[![STM32F746 board photo](/images/ST32F746.jpg)](/getting-started/stm32f746disco/)
 
-* [Raspberry Pi 2](raspberrypi2.html)
-([board details](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/))
+* [Raspberry Pi 2](/getting-started/raspberrypi2/)
+([board details][rpi2])
 <br>
-[![Raspberry Pi 2 board photo](/images/RPI2.jpg)](raspberrypi2.html)
+[![Raspberry Pi 2 board photo](/images/RPI2.jpg)](/getting-started/raspberrypi2/)
 
 If you just want to see what Dartino programs look like, take a peek at our
 [samples page](/samples/).
 
-If you would like to use Dartino a different board, please see the [custom
-bring-up](/custom-bring-up.html) page.
+If you would like to use Dartino a different board, please see the
+[custom bring-up](/custom-bring-up/) page.
 
 *Note:* We currently do not support Windows, so you will need a development PC
 running MacOS or Linux. Future versions are expected to support Windows.
+
+[stm32f746]: http://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-eval-tools/stm32-mcu-eval-tools/stm32-mcu-discovery-kits/32f746gdiscovery.html
+[rpi2]: https://www.raspberrypi.org/products/raspberry-pi-2-model-b/

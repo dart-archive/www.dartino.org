@@ -5,7 +5,7 @@ layout: page
 
 # Dartino Codelab setup
 
-These instructions will help you prepare for the [Dartino codelab](index.html).
+These instructions will help you prepare for the [Dartino codelab](/codelab/).
 
 The current codelab uses Dartino SDK version 0.4.0.
 
@@ -84,9 +84,9 @@ Install required support libraries, and configure USB:
   1. We need to configure USB; in a Terminal run: `sudo cp dartino-sdk/platforms/stm32f746g-discovery/config/49-stlinkv2-1.rules /etc/udev/rules.d`
   1. Reload rules; in a Terminal run: `sudo udevadm control --reload-rules`
 
-The Dartino tools are based on the [Atom editor](http://atom.io). This is a
+The Dartino tools are based on the [Atom editor](https://atom.io). This is a
 highly customizable editor created by the team behind GitHub. Install Atom from
-[http://atom.io](http://atom.io), and then install the [Dartino
+[http://atom.io](https://atom.io), and then install the [Dartino
 plugin](https://atom.io/packages/dartino).
 
 Next, test if the 'dartino' command works by typing the following in a

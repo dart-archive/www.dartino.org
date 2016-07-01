@@ -20,7 +20,7 @@ To develop embedded programs with Dartino, you will need the following:
 
 * A developer PC (running MacOS or Linux) where you write the programs
 
-* A [STM32 F746 Discovery](http://www.st.com/stm32f7-discovery) development
+* A [STM32 F746 Discovery](http://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-eval-tools/stm32-mcu-eval-tools/stm32-mcu-discovery-kits/32f746gdiscovery.html) development
 board
 
 * A MiniUSB cable to connect the F746 and your developer PC
@@ -138,12 +138,12 @@ dartino flash samples/general/hello.dart
 *Note*: If you get the error *"jtag status contains invalid mode value -
 communication failure"* when flashing, your board likely has outdated flashing
 firmware. You can update to version V2j27 or later using the [ST-LINK firmware
-upgrader](http://www.st.com/web/en/catalog/tools/PF260217).
+upgrader](http://www.st.com/content/st_com/en/products/embedded-software/development-tool-software/stsw-link007.html).
 
 ## Next steps
 
 Ready for some more fun? Take a look at our
-[samples](/samples/stm32f746disco.html), and read more about the [dartino
-command](/tool.html).
+[samples](/samples/stm32f746disco/), and read more about the [dartino
+command](/tool/).
 
-And don’t forget to send us some feedback, and ask some [questions](/faq.html).
+And don’t forget to send us some feedback, and ask some [questions](/faq/).

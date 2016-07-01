@@ -102,7 +102,7 @@ Raspbian operating system, and the Dartino binaries for Raspberry Pi 2.
 
 This step uses a script that automates the download of Raspbian, and performs
 the needed configuration. If you prefer to configure the image manually, see the
-[manual install instructions](manual-install.html).
+[manual install instructions](/getting-started/manual-install/).
 
 Start by opening a terminal window, and enter the following command (*note*: you
 will be prompted to enter your password as the script performs system level
@@ -204,9 +204,9 @@ console.
 ## Next steps
 
 Ready for some more fun? Take a look at our [samples](/samples/), and read
-more about the [dartino command](tool.html).
+more about the [dartino command](/tool/).
 
-And don’t forget to send us some feedback, and ask some [questions](faq.html).
+And don’t forget to send us some feedback, and ask some [questions](/faq/).
 
 ## Security notes
 

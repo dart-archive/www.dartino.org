@@ -17,4 +17,4 @@ should be doable if the platform has the following characteristics:
 * At least 256kb flash (future versions might support less flash)
 * Is supported by FreeRTOS
 
-To get additional details, please [contact us](/faq.html).
+To get additional details, please [contact us](/faq/).

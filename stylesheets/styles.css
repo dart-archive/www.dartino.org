@@ -102,6 +102,19 @@ ul {
   padding-left: 25px;
 }
 
+li {
+  font-weight:normal;
+}
+
+
+ul.menu {
+  margin: 0;
+}
+
+li.menu-current-selection {
+  font-weight:700;
+}
+
 ol {
   list-style-position: inside;
   list-style: decimal;
