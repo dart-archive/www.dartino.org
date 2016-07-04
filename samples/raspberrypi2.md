@@ -1,5 +1,5 @@
 ---
-title: Dartino project samples
+title: Dartino RPi2 samples
 layout: page
 ---
 

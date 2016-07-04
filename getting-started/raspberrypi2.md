@@ -1,5 +1,5 @@
 ---
-title: Dartino Getting Started
+title: Dartino RPi2 Getting Started
 layout: page
 ---
 

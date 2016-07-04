@@ -1,9 +1,9 @@
 ---
-title: Dartino project samples
+title: Dartino F746 samples
 layout: page
 ---
 
-# Dartino samples for STM32F746
+# Dartino samples for STM32F746 Discovery
 
 We have a number of STM32F746 sample programs available in the
 `samples/stm32f746g-discovery` folder. Let’s take a look at the code, and get
