@@ -5,7 +5,7 @@ layout: page
 
 <h1 class="why">Why Dartino?</h1>
 
-Dartino is an **experimental** open-source project that enables you to write
+Dartino is an early-stage open-source project that enables you to write
 software for embedded systems with much higher productivity than existing native
 approaches.
 
@@ -67,9 +67,19 @@ that in the image with the fast and safe Dartino runtime. Thus Dartino code runs
 much faster than other high-level embedded programming languages, yet is much
 easier to use than traditional embedded C.
 
+<h2 class="why">Great IDE support</h2>
+
+Dartino can be used with your current preferred text editor, but we recommend
+our great IDE support. This presents your code with beautiful syntax
+highlighting, checks your code as you type, and speeds up your coding with code
+completions. And unlike most other embedded tools, our IDE support is offered
+for free!
+![Code completion screenshot](/images/atom-code-completion.png)
+
 <h2 class="why">Free and open</h2>
 
 Dartino is free and open-source
 ([license](https://github.com/dartino/sdk/blob/master/LICENSE.md)). This
 includes all key parts: Dartino developer tools, IDE, libraries, and runtime.
-The development is facilitated [on GitHub](https://github.com/dartino/sdk).
+The development is facilitated [on GitHub](https://github.com/dartino/sdk), and
+contributions are most welcome!

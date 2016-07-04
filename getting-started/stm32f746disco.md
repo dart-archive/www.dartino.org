@@ -144,6 +144,6 @@ upgrader](http://www.st.com/content/st_com/en/products/embedded-software/develop
 
 Ready for some more fun? Take a look at our
 [samples](/samples/stm32f746disco/), and read more about the [dartino
-command](/tool/).
+command](/guides/tool/).
 
 And don’t forget to send us some feedback, and ask some [questions](/faq/).

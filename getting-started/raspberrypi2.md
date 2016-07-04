@@ -204,7 +204,7 @@ console.
 ## Next steps
 
 Ready for some more fun? Take a look at our [samples](/samples/), and read
-more about the [dartino command](/tool/).
+more about the [dartino command](/guides/tool/).
 
 And don’t forget to send us some feedback, and ask some [questions](/faq/).
 

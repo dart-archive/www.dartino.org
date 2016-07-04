@@ -5,8 +5,8 @@ layout: page
 
 # Feedback & contact details
 
-Dartino is still an early project, so we would love your feedback. Tell us what
-you think!
+Dartino is in the early stages of development, so we would love your feedback.
+Tell us what you think!
 
 * For direct feedback, you can email us at
 [dartino-feedback@googlegroups.com](mailto:dartino-feedback@googlegroups.com).
@@ -20,8 +20,7 @@ does not answer your question, please join us in our [Dartino
 Discuss](https://groups.google.com/forum/#!forum/dartino-discuss) group.
 
 * *Q*: What is the Dartino Project?
-
-* *A*: Dartino is an **experimental** project to enable highly productive
+* *A*: The goal of the Dartino project is to enable highly productive
  development for embedded devices (see 'what is supported' below). It is
  powered by the [Dart
  language](https://www.dartlang.org/docs/dart-up-and-running/ch02.html) and a
