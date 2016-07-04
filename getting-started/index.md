@@ -12,7 +12,7 @@ started.
 <br>
 [![STM32F746 board photo](/images/ST32F746.jpg)](/getting-started/stm32f746disco/)
 
-* [ST STM32F411RE Nucleo](/getting-started/stm32f7411nucleo/) ([board details][stm32f411])
+* [ST STM32F411RE Nucleo](/getting-started/stm32f411nucleo/) ([board details][stm32f411])
 <br>
 [![STM32F411 board photo](/images/ST32F411.jpg)](/getting-started/stm32f411nucleo/)
 
