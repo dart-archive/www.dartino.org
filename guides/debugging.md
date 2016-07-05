@@ -21,7 +21,7 @@ To enable debugging, you need to flash an image that has debugging enabled. This
 is easily done with an option, and requires no change to your source code:
 
 ```
-dartino flash --debugging-mode samples/stm32f746g-discovery/disco-light.dart
+dartino flash --debugging-mode --no-wait samples/stm32f746g-discovery/disco-light.dart
 ```
 
 ### Attaching the debugger
