@@ -9,7 +9,7 @@ Dartino is an early-stage open-source project that enables you to write
 software for embedded systems with much higher productivity than existing native
 approaches.
 
-<h2 class="why">Highly productive and familiar language</h2>
+<h2 class="why">High-level, familiar language</h2>
 
 Dartino is powered by the [Dart
 language](https://www.dartlang.org/docs/dart-up-and-running/ch02.html), a modern
