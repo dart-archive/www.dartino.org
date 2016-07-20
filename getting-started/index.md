@@ -24,7 +24,7 @@ If you just want to see what Dartino programs look like, take a peek at our
 [samples page](/samples/).
 
 If you would like to use Dartino a different board, please see the
-[custom bring-up](/custom-bring-up/) page.
+[custom bring-up](/guides/bring-up/) page.
 
 *Note:* We currently do not support Windows, so you will need a development PC
 running MacOS or Linux. Future versions are expected to support Windows.
