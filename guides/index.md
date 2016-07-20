@@ -1,5 +1,8 @@
 ---
 title: Dartino guides
 layout: page
-redirect_to: /guides/tool/
 ---
+
+# Dartino Guides
+
+Please select a guide from the menu.
