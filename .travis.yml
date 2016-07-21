@@ -19,7 +19,7 @@ deploy:
   on:
     branch: master
   skip_cleanup: true
-  script: firebase deploy --project staging-www-dartino-org --token "$FIREBASE_TOKEN"
+  script: firebase deploy --project www-dartino-org-a9620 --token "$FIREBASE_TOKEN"
 
 after_deploy:
  - echo 'Succesfully deployed /public/ to https://www.dartino.org!'.
