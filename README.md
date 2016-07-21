@@ -1,4 +1,4 @@
-This repo contains the source code for the main Dartino website available at [https://www.dartino.org](https://www.dartino.org).
+This repo contains the source code for the main Dartino website available at [https://dartino.org](https://dartino.org).
 
 ## Configuration instructions needed to make and verify edits
 
