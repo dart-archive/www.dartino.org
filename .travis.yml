@@ -9,7 +9,7 @@ install:
 
 script:
  - bundle exec jekyll build
- - bundle exec htmlproofer _site
+ - bundle exec htmlproofer _site --url-ignore http://openweathermap.org/api
 
 after_success:
  - echo 'Succesfully built and validated the site!'.

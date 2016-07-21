@@ -52,8 +52,9 @@ The Travis CI job performs the following tasks:
 1. Builds the site:<br>
 `bundle exec jekyll build`
 
-1. Checks links:<br>
-`bundle exec htmlproofer _site`
+1. Checks links (openweathermap is skipped as it fails due to throttling when
+called from Travis):<br>
+`bundle exec htmlproofer _site --url-ignore http://openweathermap.org/api`
 
 1. Deploys to Firebase:<br>
 `firebase deploy`
