@@ -1,24 +1,30 @@
 This repo contains the source code for the main Dartino website available at [https://www.dartino.org](https://www.dartino.org).
 
-## Installation instructions
+## Configuration instructions needed to make and verify edits
 
-1. Check that you have Ruby (Mac’s already have this):
+1. Check that you have Ruby (Mac’s already have this):<br>
 `ruby --version`
 
-1. We will be running everything inside bundler -- install it:
+1. We will be running everything inside [bundler](http://bundler.io/) -- install
+it:<br>
 `sudo gem install bundler`
 
-1. Initialize bundle:
+1. Initialize bundler:<br>
 `bundle install`
 
-1. Install the Firebase CLI.
+1. Install the Firebase CLI:<br>
+`npm install -g firebase-tools` ([details](https://www.firebase.com/docs/hosting/command-line-tool.html))
 
 ## Making changes
 
 ### Editing pages
 
-The site source code is in markdown. Edit the .md files to make changes (e.g.,
-edit `index.md` to make a change to `index.html`).
+The site source code is in markdown, from which the site html is generated. Edit
+the .md files to make changes (e.g., edit `index.md` to make a change to
+`index.html`).
+
+Note that URLs are automatically *prettified* so that `foo.md` becomes `/foo/`,
+and `/guides/compile.md` becomes `/guides/compile/`.
 
 
 ### Validating changes
@@ -37,15 +43,22 @@ bundle exec htmlproofer _site
 
 ## Publishing changes
 
-### Generate a new site
+The site is automatically deployed to Firebase hosting whenever new files are
+pushed to Github in the master branch. If you want to edit but not deploy, push
+your changes to a branch, and then merge to master when you are ready to deploy.
 
-The actual hosted content is in the `_site` directory. Update the content of
-that site by asking Jekyll to generate: `bundle exec jekyll build`
+The Travis CI job performs the following tasks:
 
-### Publish files
+1. Builds the site:<br>
+`bundle exec jekyll build`
 
-The site is hosted on Firebase. After validating the output in the `_site`
-directory, take these steps to deploy it to Firebase: `firebase deploy`
+1. Checks links:<br>
+`bundle exec htmlproofer _site`
 
-Check the deployment status on the admin page:
+1. Deploys to Firebase:<br>
+`firebase deploy`
+
+[![Deployment status -](https://travis-ci.org/dartino/www.dartino.org.svg?branch=master)](https://travis-ci.org/dartino/www.dartino.org)
+
+You can check the Firebase deployment status on the Firebase admin page:
 [`http://go/dartino-firebase-admin`](http://go/dartino-firebase-admin)

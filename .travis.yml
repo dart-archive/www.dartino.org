@@ -1,0 +1,24 @@
+language: ruby
+
+cache: bundler
+
+install:
+ - bundle install
+ - npm install -g firebase-tools
+
+script:
+ - bundle exec jekyll build
+ - bundle exec htmlproofer _site
+
+after_success:
+ - echo 'Succesfully built and validated the site!'.
+
+deploy:
+  provider: script
+  on:
+    branch: master
+  skip_cleanup: true
+  script: firebase deploy --project staging-www-dartino-org --token "$FIREBASE_TOKEN"
+
+after_deploy:
+ - echo 'Succesfully deployed /public/ to https://www.dartino.org!'.
