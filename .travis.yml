@@ -3,6 +3,11 @@ rvm: 2.2.3
 
 cache: bundler
 
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+
 install:
  - bundle install
  - npm install -g firebase-tools
