@@ -1,3 +1,5 @@
 {
-  "public": "_site"
+  "hosting": {
+    "public": "_site"
+  }
 }
