@@ -1,5 +1,5 @@
 ---
-title: Why Dartino
+title: Dartino
 layout: page
 ---
 
