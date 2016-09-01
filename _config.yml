@@ -1,4 +1,4 @@
-exclude: [Gemfile, Gemfile.lock, firebase.json, AUTHORS, LICENSE, README.md]
+exclude: [Gemfile, Gemfile.lock, firebase.json, AUTHORS, LICENSE, README.md, '*.old']
 # Build settings
 permalink: pretty
 markdown: kramdown
