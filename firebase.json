@@ -1,5 +1,97 @@
 {
   "hosting": {
     "public": "_site"
-  }
+  },
+  "redirects": [
+    {
+    	"source" : "/why",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/faq",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/codelab",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/codelab/setup",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/getting-started",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/getting-started/manual-install",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/getting-started/stm32f411nucleo",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/getting-started/stm32f746disco",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/guides",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/guides/atom",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/guides/bring-up",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/guides/concurrency",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/guides/debugging",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/guides/tool",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/samples",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/samples/raspberrypi2",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/samples/stm32f411nucleo",
+    	"destination" : "/",
+    	"type" : 301
+    },
+    {
+    	"source" : "/samples/stm32f746disco",
+    	"destination" : "/",
+    	"type" : 301
+    }
+  ]
 }
